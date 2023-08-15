@@ -1,0 +1,29 @@
+<div class="card mb-3">
+  <img src="https://th.bing.com/th?id=OBTQ.BT2DAD338406E15F49EAD9495CDEB2A2A14B542733BD3007AEEA4B817A952399F9&w=608&h=160&c=2&rs=1&o=6&dpr=1.5&pid=SANGAM" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Login</h5>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class ="field form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control",placeholder:"Please Enter Email ID" %>
+  </div>
+
+  <div class ="field form-group">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" ,class: "form-control",placeholder:"Please Enter Password"%>
+  </div>
+<br/>
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in",class:"btn btn-primary" %>
+  </div>
+<% end %>
+<br/>
+<%= render "devise/shared/links" %>  </div>
+</div>

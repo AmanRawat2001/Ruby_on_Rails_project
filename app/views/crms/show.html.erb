@@ -1,0 +1,8 @@
+<div class="jumbotron">
+  <h1 class="display-4">
+  <%= @crm.app_name %>
+  </h1>
+  <p class="lead"><%= @crm.app_phone%></p><p><%= @crm.app_email%></p>
+  <%= link_to "Edit", edit_crm_path(@crm), class:"btn btn-secondary" %>
+  <%= link_to "Back", crms_path,class:"btn btn-secondary" %></div>
+
